@@ -1,0 +1,24 @@
+
+# Path of vina used as docking software.
+vina_path /mnt/home/zhangjie/Projects/Github/IFP-RNN/MGLTools-1.5.7/bin/vina  
+# Path of prepare_ligand4.py used to prepare ligands.
+prepare_ligand4 /mnt/home/zhangjie/Projects/Github/IFP-RNN/MGLTools-1.5.7/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_ligand4.py
+
+# protein file prepared in pdbqt format
+protein_file ./Data/cdk2.pdbqt
+
+# folder including ligands in pdbqt format for create interaction fingerprint
+ligand_folder ./AIFP/Data/CDK2_prepared_Results
+
+# ligand used to detect atoms and residues that can form strong interaction with the ligands for creating IFP reference
+refer_ligands_path ./Data/test_results
+
+
+# Parametes for interaction detection
+refer_cutoff    8   # default: 6
+hbond_cutoff  3.5     # default: 3.5
+halogenbond_cutoff  4    # default: 4s
+electrostatic_cutoff  4     # default: 4
+hydrophobic_cutoff  4   # default: 4
+pistack_cutoff  5   # default: 5
+

@@ -1,0 +1,25 @@
+ChEMBL ID,Smiles
+1KE8,O=C1/C(=C\Nc2ccc(S(=O)(=O)Nc3nccs3)cc2)/c2ccccc2N1
+5A14,c1c(Oc2nc(N)ncc2)ccc(NC(=O)Nc2cc(C(F)(F)F)c(CN3CCN(C)CC3)cc2)c1
+5JQ8,n1n2c(cc(NC[C@@H]3CCNC[C@H]3O)nc2c(C(C)C)c1)NCc1ccccc1
+4LYN,c1(ncc(C(C)(C)C)o1)CSc1cnc(NC(=O)[C@@H](C)c2ccccc2)s1
+3RAL,c1ccc([C@H](c2c(N)nc(Nc3ccc(cc3)S(=O)(=O)N)s2)O)cc1OC
+3QRU,[nH]1c(C(=O)NC)c2C[C@@H](C(CC)(C)C)CCc2n1
+2BPM,N1(c2ccc(cc2)[C@H](C)C(=O)NC2=NN=C(C2)C2CC2)C(=O)N=CC1
+5D1J,c1(CSc2cnc(NC(=O)C3CCNCC3)s2)ncc(C(C)(C)C)o1
+2VTO,c1(F)ccc(NC(=O)c2c(NC(=O)c3ccccc3)cn[nH]2)cc1
+2B54,Clc1cc(cc(Cl)c1n1c2nc([nH]c(=O)c2c(CC)n1)Cc1ccc(O)c(O)c1)Cl
+1PYE,c1(C(=O)c2c(F)cccc2F)ccc2nc(N)c(C(=O)c3ccccc3)n2c1
+1YKR,Clc1cccc(Cl)c1C(=O)C1=CN2C(=CC1)N=C(Nc1ccc(cc1)S(=O)(=O)N)C2
+4BZD,CN(CCCOc1cnc(Nc2cc(n3c4ccccc4nc3)ncn2)cc1)C
+4FKJ,c1c(CC(=O)NC2=NN=C(C3CC3)C2)ccc(OCCN2CCCC2)c1
+2B55,NCC1CCN(CC(=O)Nc2c3C(=O)c4c(C5CCCCC5)[nH]nc4c3ccc2)CC1
+2R64,c1(ccc(CC(=O)Nc2c3cc(N4CCCS4(=O)=O)ccc3[nH]n2)cc1)N1CCCCC1
+2W1H,O=C(c1ccccc1)Nc1c(c2[nH]c3ccccc3n2)n[nH]c1
+2R3M,c1(CC)cnn2c(NCc3cnc(N)nc3)cc(c3c(F)cccc3F)nc12
+3EZV,c1cc2c(c3[nH]c4c(N5CCN(C)CC5)cccc4n3)n[nH]c2cc1c1ccc(N)cc1
+4ACM,CN(CCNS(=O)(=O)c1ccc(c2nc(C(=O)Nc3cnccc3)c(N)nc2)cc1)C
+5L2S,n1cc(CN2CCN(CC2)CC)ccc1Nc1nc(c2cc(F)c3nc(C)n(C(C)C)c3c2)c(F)cn1
+5L2I,CC(=O)c1c(=O)n(c2c(cnc(Nc3ccc(cn3)N3CCNCC3)n2)c1C)C1CCCC1
+4HYH,c1cc(N2CCNCC2)c(NC(=O)c2csc(N3Cc4ccc(OC)cc4C3=O)n2)cn1
+1YOL,c1(N)ncnc2n(cc(c3cc(OC)ccc3)c12)c1ccc(CN2CCC(O)CC2)cc1
