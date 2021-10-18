@@ -86,6 +86,38 @@ ResIFP shares the same preparation code above as the AIFP.
 ## Results
 After preparation of the cRNN input, three types, namely, '*_AIFPsmi.csv', '*_dScorePP.csv', '*_ecfpSmi.csv'  of file will be obtained for each type of model, separately.
 
+# Directly calculate interaction fingerprint (IFP) with SDF file 
+If the users don't want to follow the docking rutine of this project, and want to calculate the IFP from the docking results in SDF format. The jobs can be done followint the steps bellow.
+## SDF format rules
+The SDF format should include three propertis for each molecules, namely 'Docking_score', 'Pose_id', 'SMILES'. If you conducted docking with glide, and have tranformed the docking results into SDF format. Further preparation can be done with the following command.
+```
+python ../AIFP/prepare_sdf_glide.py --smi /data/ranting/work/tbk1/x01d/x01 --sdf /data/ranting/work/tbk1/x01d/sp_4euu_min_x01-2_pv.sdf --work_dir ./
+
+```
+- --sdf The docking result of glide.
+- --smi The SMILES of the molecules, which is optional. If it is not provided or it is invalid the SMILES will be genereated from the mol file instead.
+- work_dir The directory to save the results.
+
+## Create IFP reference (SDF)
+```
+python ../AIFP/create_reference_sdf.py --config config_ifp_sdf.txt --protein 4euu_cpx_optim_pro.pdb --sdf ./test.sdf --n_jobs 50
+```
+- --protein The protein should be in pdb format.
+A folder of 'obj' will be created, which includes three files, namely, 'protein.pdbqt',  'refer_atoms_list.pkl',  'refer_res_list.pkl'. To be noted, the files will be reused in the background. So your working directory should include the folder all the time.
+
+## Construct interaction fingerprint (SDF)
+```
+python ../AIFP/create_IFP_sdf.py --config config_ifp_sdf.txt  --sdf ./test.sdf --n_jobs 50
+```
+It is needed to be noted, an 'info.csv' file, including Ligand name, docking score, pose id, SMILES etc., will be generated in the working directory, and will be used later.s
+
+# Prepare input for constrained molecule generative model (SDF).
+
+```
+python ../AIFP/prepare_ddc_input_sdf.py --dataset IFP_AAIFP.csv --info Tmp_test/info.csv --type ecfp
+```
+
+
 # Training
 Train command of cRNN model is as below. If you want to change the default training parameters, please edit the 'train_ddc.py' file directly.
 ```
@@ -93,4 +125,4 @@ python -u ../train_ddc.py --train_csv ./AIFP_files/cdk2_chembl0_ResIFP_AIFPsmi_5
 ```
 - --train_csv The multiple input files prepared in the previous section. The input files should be separated with comma.
 - --load_pkl This option dertermint if loading the data from pickle file directly. This option should be '0', if the training is run first time. And after processing the inputs will be saved in a pickle file and can be reused next time after setting this option to '1'.
-- --save This option determine where to save the checkpoint of trained models during the training process.ss 
+- --save This option determine where to save the checkpoint of trained models during the training process.ss sss
